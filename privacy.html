@@ -5,103 +5,169 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>InboxWhiz | Privacy Policy</title>
-    <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/kg-always-a-good-time" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <section class="privacy-policy">
-        <h1>Privacy Policy</h1>
-        <p class="last-updated">
-            Last updated: June 3, 2025
-        </p>
-        <p>
-            This Privacy Policy explains how we collect, use, and safeguard your information when you use our services.
-            By using InboxWhiz, you agree to the terms of this policy.
-        </p>
-        <h2>Information Collection</h2>
-        <p>
-            We only access necessary information to provide our services. This includes:
-        <ul>
-            <li>Email content and metadata</li>
-            <li>Authorization credentials necessary to retrieve this information</li>
-        </ul>
-        </p>
-        <h2>Use of Information</h2>
-        <p>
-            Your email content, metadata, and the authorization credentials used to retrieve this information
-            are accessed only with your permission and stored only on your web browser, never on our servers.
-            InboxWhiz accesses your email data, which includes the content and metadata of email
-            messages, via the Gmail API. This data is used exclusively to facilitate the processing
-            (block/delete/unsubscribe) of emails. This information is permanently deleted upon the removal of the
-            InboxWhiz web extension.
-            <br /><br />
-            We do not sell, trade, or otherwise transfer your personal information to third parties.
-        </p>
-        <h2>Data Protection and Security</h2>
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/logo.svg" alt="InboxWhiz Logo" class="logo-icon">
+                InboxWhiz
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-links">
+                <a href="https://github.com/InboxWhiz/gmail-declutter-extension" target="_blank" rel="noopener"
+                    class="nav-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="/support.html" class="nav-link">Support</a>
+                <a href="/privacy.html" class="nav-link">Privacy</a>
+                <a href="https://buymeacoffee.com/inboxwhiz" target="_blank" rel="noopener" class="nav-donate-btn">
+                    Donate
+                </a>
+            </div>
+        </div>
+    </nav>
 
-        <p>
-            Because InboxWhiz handles sensitive Gmail data, we have implemented the following measures to protect it:
-        </p>
-        <ul>
-            <li><strong>Encryption in Transit:</strong> Every request to Google's APIs (including token exchanges and
-                Gmail data fetches) is made over HTTPS/TLS. This ensures that all data (your emails, metadata, and
-                tokens) is encrypted while traveling between your browser and Google's servers.</li>
-            <li><strong>Local Storage Isolation:</strong> We store tokens and any metadata only in your
-                browser's extension-specific storage area. This storage is isolated per-extension, meaning no other
-                website or extension can read it. We do not write this data to any server or share it externally.</li>
-            <li><strong>Token Handling:</strong> OAuth 2.0 tokens (access tokens, refresh tokens) are managed
-                exclusively by the extension. We never log or transmit tokens outside your local browser.</li>
-            <li><strong>Access Controls:</strong> InboxWhiz only operates under the exact Google scopes you grant during
-                OAuth consent. You can revoke our access at any time from your Google Account → Security →
-                Third-party apps and services.</li>
-            <li><strong>Deletion Upon Uninstall:</strong> When you uninstall or disable the InboxWhiz extension, all
-                sensitive data (tokens, any cached email-metadata) is automatically purged from your browser. We do not
-                attempt to back it up or re-upload it elsewhere.</li>
-            <li><strong>No Human Access:</strong> The extension does not transmit your Gmail data to any human or
-                support-team inbox. All parsing, filtering, and unsubscribe/delete logic is performed entirely within
-                your browser, under your control.</li>
-        </ul>
+    <main>
+        <section class="privacy-policy">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">
+                Last updated: June 3, 2025
+            </p>
+            <br>
+            <p>
+                This Privacy Policy explains how we collect, use, and safeguard your information when you use our
+                services.
+                By using InboxWhiz, you agree to the terms of this policy.
+            </p>
+            <h2>Information Collection</h2>
+            <p>
+                We only access necessary information to provide our services. This includes:
+            <ul>
+                <li>Email content and metadata</li>
+                <li>Authorization credentials necessary to retrieve this information</li>
+            </ul>
+            </p>
+            <h2>Use of Information</h2>
+            <p>
+                Your email content, metadata, and the authorization credentials used to retrieve this information
+                are accessed only with your permission and stored only on your web browser, never on our servers.
+                InboxWhiz accesses your email data, which includes the content and metadata of email
+                messages, via the Gmail API. This data is used exclusively to facilitate the processing
+                (block/delete/unsubscribe) of emails. This information is permanently deleted upon the removal of the
+                InboxWhiz web extension.
+                <br /><br />
+                We do not sell, trade, or otherwise transfer your personal information to third parties.
+            </p>
+            <h2>Data Protection and Security</h2>
 
-        <h2>Additional Limits on Use of Your Google Data</h2>
-        <p>
-            Notwithstanding any other provision in this Privacy Policy, if you grant InboxWhiz access to your Google
-            data,
-            the use of that data will be subject to the following additional restrictions:
+            <p>
+                Because InboxWhiz handles sensitive Gmail data, we have implemented the following measures to protect
+                it:
+            </p>
+            <ul>
+                <li><strong>Encryption in Transit:</strong> Every request to Google's APIs (including token exchanges
+                    and
+                    Gmail data fetches) is made over HTTPS/TLS. This ensures that all data (your emails, metadata, and
+                    tokens) is encrypted while traveling between your browser and Google's servers.</li>
+                <li><strong>Local Storage Isolation:</strong> We store tokens and any metadata only in your
+                    browser's extension-specific storage area. This storage is isolated per-extension, meaning no other
+                    website or extension can read it. We do not write this data to any server or share it externally.
+                </li>
+                <li><strong>Token Handling:</strong> OAuth 2.0 tokens (access tokens, refresh tokens) are managed
+                    exclusively by the extension. We never log or transmit tokens outside your local browser.</li>
+                <li><strong>Access Controls:</strong> InboxWhiz only operates under the exact Google scopes you grant
+                    during
+                    OAuth consent. You can revoke our access at any time from your Google Account → Security →
+                    Third-party apps and services.</li>
+                <li><strong>Deletion Upon Uninstall:</strong> When you uninstall or disable the InboxWhiz extension, all
+                    sensitive data (tokens, any cached email-metadata) is automatically purged from your browser. We do
+                    not
+                    attempt to back it up or re-upload it elsewhere.</li>
+                <li><strong>No Human Access:</strong> The extension does not transmit your Gmail data to any human or
+                    support-team inbox. All parsing, filtering, and unsubscribe/delete logic is performed entirely
+                    within
+                    your browser, under your control.</li>
+            </ul>
 
-        <ul>
-            <li>InboxWhiz will only use your Gmail data accessed via the Gmail API to read or control Gmail message
-                metadata, headers, and message content, to enable you to process
-                (delete/unsubscribe from) emails.</li>
-            <li>InboxWhiz will not use your Gmail data for serving advertisements.</li>
-            <li>InboxWhiz will not allow humans to read your data.</li>
-            <li>Any use or transfer of information received from Google APIs by InboxWhiz will comply with the <a
-                    href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank"
-                    rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use
-                requirements.</li>
-        </ul>
-        </p>
-        <h2>Policy Changes</h2>
-        <p>
-            This Privacy Policy may be updated periodically. Any changes will be posted on this page, so please
-            review it regularly.
-        </p>
-        <h2>Contact Us</h2>
-        <p>
-            If you have any questions regarding this Privacy Policy, please contact us at inboxwhiz.help@gmail.com.
-        </p>
-    </section>
+            <h2>Additional Limits on Use of Your Google Data</h2>
+            <p>
+                Notwithstanding any other provision in this Privacy Policy, if you grant InboxWhiz access to your Google
+                data,
+                the use of that data will be subject to the following additional restrictions:
 
-    <footer>
-        <nav class="footer-nav a">
-            <a href="/">Home</a> &middot;
-            <a href="/support.html">Support</a> &middot;
-            <a href="/privacy.html">Privacy Policy</a>
-        </nav>
-        <div>&copy; 2025 InboxWhiz. Not affiliated with Google or Gmail.</div>
-        <div>Made with ❤️ for busy inboxes.</div>
+            <ul>
+                <li>InboxWhiz will only use your Gmail data accessed via the Gmail API to read or control Gmail message
+                    metadata, headers, and message content, to enable you to process
+                    (delete/unsubscribe from) emails.</li>
+                <li>InboxWhiz will not use your Gmail data for serving advertisements.</li>
+                <li>InboxWhiz will not allow humans to read your data.</li>
+                <li>Any use or transfer of information received from Google APIs by InboxWhiz will comply with the <a
+                        href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank"
+                        rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use
+                    requirements.</li>
+            </ul>
+            </p>
+            <h2>Policy Changes</h2>
+            <p>
+                This Privacy Policy may be updated periodically. Any changes will be posted on this page, so please
+                review it regularly.
+            </p>
+            <h2>Contact Us</h2>
+            <p>
+                If you have any questions regarding this Privacy Policy, please contact us at inboxwhiz.help@gmail.com.
+            </p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/support.html">Support</a>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="https://github.com/InboxWhiz/gmail-declutter-extension" target="_blank"
+                    rel="noopener">GitHub</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 InboxWhiz. Not affiliated with Google or Gmail.
+                <br><br>
+                Made with ❤️ for busy inboxes
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', function () {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-link, .nav-donate-btn').forEach(link => {
+            link.addEventListener('click', function () {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

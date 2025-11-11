@@ -5,86 +5,220 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>InboxWhiz - Clean Up Your Gmail Inbox Effortlessly</title>
-    <link href="https://fonts.googleapis.com/css?family=Inter:400,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/kg-always-a-good-time" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-    <header>
-        <nav class="header-nav"><a href="/privacy.html">Privacy Policy</a></nav>
-        <div class="logo">InboxWhiz</div>
-        <div class="subtitle">
-            Declutter your Gmail inbox in seconds.<br>
-            Bulk unsubscribe and delete emails - all from a simple Chrome extension.
+    <!-- Navigation -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="/logo.svg" alt="InboxWhiz Logo" class="logo-icon">
+                InboxWhiz
+            </div>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-links">
+                <a href="https://github.com/InboxWhiz/gmail-declutter-extension" target="_blank" rel="noopener"
+                    class="nav-link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                    GitHub
+                </a>
+                <a href="/support.html" class="nav-link">Support</a>
+                <a href="/privacy.html" class="nav-link">Privacy</a>
+                <a href="https://buymeacoffee.com/inboxwhiz" target="_blank" rel="noopener" class="nav-donate-btn">
+                    Donate
+                </a>
+            </div>
         </div>
-        <button class="cta-btn" onclick="window.open('https://chromewebstore.google.com/detail/inboxwhiz-bulk-unsubscrib/bjcegpgebdbhkkhngbahpfjfolcmkpma', '_blank')">
-            <img src="https://www.google.com/chrome/static/images/chrome-logo.svg" alt="Chrome logo"
-                style="height:1.5em;vertical-align:middle;margin-right:0.5em;">
-            Add to Chrome
-        </button>
-        <div style="display: flex; justify-content: center;">
-            <a href="https://buymeacoffee.com/inboxwhiz" target="_blank" rel="noopener" >
-                <img style="display: block; height: 60px;" src="/bmac.png">
-            </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="badge">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                Open Source & Community Supported
+            </div>
+            <h1 class="hero-title">Declutter Your Gmail Inbox in Seconds</h1>
+            <p class="hero-subtitle">
+                A powerful, privacy-first Chrome extension that helps you bulk unsubscribe and delete emails
+                effortlessly.
+            </p>
+            <div class="hero-cta">
+                <button class="cta-primary"
+                    onclick="window.open('https://chromewebstore.google.com/detail/inboxwhiz-bulk-unsubscrib/bjcegpgebdbhkkhngbahpfjfolcmkpma', '_blank')">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="margin-right:0.5rem;">
+                        <path
+                            d="M12 0C8.21 0 4.831 1.757 2.632 4.501l3.953 6.848A5.454 5.454 0 0 1 12 6.545h10.691A12 12 0 0 0 12 0zM1.931 5.47A11.943 11.943 0 0 0 0 12c0 6.012 4.42 10.991 10.189 11.864l3.953-6.847a5.45 5.45 0 0 1-6.865-2.29zm13.342 2.166a5.446 5.446 0 0 1 1.45 7.09l.002.001h-.002l-5.344 9.257c.206.01.413.016.621.016 6.627 0 12-5.373 12-12 0-1.54-.29-3.011-.818-4.364zM12 16.364a4.364 4.364 0 1 1 0-8.728 4.364 4.364 0 0 1 0 8.728z" />
+                    </svg>
+                    Add to Chrome
+                </button>
+                <a href="https://buymeacoffee.com/inboxwhiz" target="_blank" rel="noopener"
+                    class="cta-secondary cta-coffee">
+                    <img src="/bmc-logo.svg" alt="Buy Me a Coffee" class="cta-coffee-icon">
+                    Buy me a coffee
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <div class="stat-value">100%</div>
+                    <div class="stat-label">Free & Open Source</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">0</div>
+                    <div class="stat-label">Data Collected</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">Local</div>
+                    <div class="stat-label">Processing Only</div>
+                </div>
+            </div>
         </div>
     </header>
+
+    <!-- Features Section -->
     <main>
-        <section class="features">
-            <div class="feature">
-                <div class="feature-icon">🔗</div>
-                <div class="feature-title">Unsubscribe Automation</div>
-                <div class="feature-desc">
-                    Instantly unsubscribe from unwanted emails. InboxWhiz finds and follows unsubscribe links for you.
+        <section class="features-section">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Everything you need to take control of your inbox</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">🔗</div>
+                    </div>
+                    <h3 class="feature-title">Auto Unsubscribe</h3>
+                    <p class="feature-desc">
+                        Instantly unsubscribe from unwanted emails. InboxWhiz automatically finds and follows
+                        unsubscribe links.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">🗑️</div>
+                    </div>
+                    <h3 class="feature-title">Bulk Delete</h3>
+                    <p class="feature-desc">
+                        Select senders and delete all their emails at once. Perfect for clearing out spam and
+                        promotional mail.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">📊</div>
+                    </div>
+                    <h3 class="feature-title">Smart Sorting</h3>
+                    <p class="feature-desc">
+                        See which senders fill your inbox the most. Sort and act quickly to reclaim your space.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">🔒</div>
+                    </div>
+                    <h3 class="feature-title">Privacy First</h3>
+                    <p class="feature-desc">
+                        Everything runs locally in your browser. We never store, share, or access your email data.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">⚡</div>
+                    </div>
+                    <h3 class="feature-title">Lightning Fast</h3>
+                    <p class="feature-desc">
+                        Clean, intuitive sidebar interface that works seamlessly within Gmail. No context switching
+                        needed.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon-wrapper">
+                        <div class="feature-icon">💎</div>
+                    </div>
+                    <h3 class="feature-title">100% Open Source</h3>
+                    <p class="feature-desc">
+                        Fully transparent code you can inspect, modify, and contribute to. No hidden agendas, just
+                        community-driven development.
+                    </p>
                 </div>
             </div>
-            <div class="feature">
-                <div class="feature-icon">🗑️</div>
-                <div class="feature-title">Bulk Email Management</div>
-                <div class="feature-desc">
-                    Select senders and delete all their emails in one go. Perfect for clearing out spam and bulk mail.
-                </div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">📊</div>
-                <div class="feature-title">Sender Sorting</div>
-                <div class="feature-desc">
-                    See which senders fill your inbox the most. Sort and act quickly to reclaim space.
-                </div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🔒</div>
-                <div class="feature-title">Data Privacy Guaranteed</div>
-                <div class="feature-desc">
-                    Everything is processed directly on your browser. We never store, share, or access your information.
-                </div>
-            </div>
-            <div class="feature">
-                <img class="feature-icon" src="https://www.gstatic.com/images/branding/product/1x/gmail_2020q4_48dp.png"
-                    alt="Gmail logo">
-                <div class="feature-title">Secure Gmail Integration</div>
-                <div class="feature-desc">
-                    Uses Gmail API with OAuth for safe, private access to your inbox.
-                </div>
-            </div>
-            <div class="feature">
-                <div class="feature-icon">🧩</div>
-                <div class="feature-title">Intuitive Sidebar UI</div>
-                <div class="feature-desc">
-                    Manage your inbox from a handy sidebar while you use Gmail. Clean, modern, and easy to use.
+        </section>
+
+        <!-- Community Section -->
+        <section class="community-section">
+            <div class="community-content">
+                <h2 class="community-title">Built by the Community,<br>For the Community</h2>
+                <p class="community-text">
+                    InboxWhiz is 100% open source and maintained by contributors like you.
+                    Join us in making email management better for everyone.
+                </p>
+                <div class="community-actions">
+                    <a href="https://github.com/InboxWhiz/gmail-declutter-extension" target="_blank" rel="noopener"
+                        class="community-btn primary">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        Contribute on GitHub
+                    </a>
+                    <a href="https://buymeacoffee.com/inboxwhiz" target="_blank" rel="noopener"
+                        class="community-btn secondary community-coffee">
+                        <img src="/bmc-logo.svg" alt="Buy Me a Coffee" class="community-coffee-icon">
+                        Buy me a coffee
+                    </a>
                 </div>
             </div>
         </section>
     </main>
-    <footer>
-        <nav class="a">
-            <a href="/">Home</a> &middot;
-            <a href="/support.html">Support</a> &middot;
-            <a href="/privacy.html">Privacy Policy</a>
-        </nav>
-        <div>&copy; 2025 InboxWhiz. Not affiliated with Google or Gmail.</div>
-        <div>Made with ❤️ for busy inboxes.</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/support.html">Support</a>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="https://github.com/InboxWhiz/gmail-declutter-extension" target="_blank"
+                    rel="noopener">GitHub</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 InboxWhiz. Not affiliated with Google or Gmail.
+                <br><br>
+                Made with ❤️ for busy inboxes
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        navToggle.addEventListener('click', function () {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-link, .nav-donate-btn').forEach(link => {
+            link.addEventListener('click', function () {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
