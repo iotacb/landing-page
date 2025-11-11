@@ -44,82 +44,42 @@
         <section class="privacy-policy">
             <h1>Privacy Policy</h1>
             <p class="last-updated">
-                Last updated: June 3, 2025
+                Last updated: November 10, 2025
             </p>
             <br>
             <p>
-                This Privacy Policy explains how we collect, use, and safeguard your information when you use our
-                services.
-                By using InboxWhiz, you agree to the terms of this policy.
+                InboxWhiz is a browser-side tool that runs locally on your browser. We do not collect, store, transmit,
+                or sell personal data.
             </p>
-            <h2>Information Collection</h2>
-            <p>
-                We only access necessary information to provide our services. This includes:
-            <ul>
-                <li>Email content and metadata</li>
-                <li>Authorization credentials necessary to retrieve this information</li>
-            </ul>
-            </p>
-            <h2>Use of Information</h2>
-            <p>
-                Your email content, metadata, and the authorization credentials used to retrieve this information
-                are accessed only with your permission and stored only on your web browser, never on our servers.
-                InboxWhiz accesses your email data, which includes the content and metadata of email
-                messages, via the Gmail API. This data is used exclusively to facilitate the processing
-                (block/delete/unsubscribe) of emails. This information is permanently deleted upon the removal of the
-                InboxWhiz web extension.
-                <br /><br />
-                We do not sell, trade, or otherwise transfer your personal information to third parties.
-            </p>
-            <h2>Data Protection and Security</h2>
 
+            <h2>What Data We Access</h2>
             <p>
-                Because InboxWhiz handles sensitive Gmail data, we have implemented the following measures to protect
-                it:
+                InboxWhiz operates entirely inside your own browser and interacts directly with the Gmail page you
+                already have open. All processing happens locally.
             </p>
-            <ul>
-                <li><strong>Encryption in Transit:</strong> Every request to Google's APIs (including token exchanges
-                    and
-                    Gmail data fetches) is made over HTTPS/TLS. This ensures that all data (your emails, metadata, and
-                    tokens) is encrypted while traveling between your browser and Google's servers.</li>
-                <li><strong>Local Storage Isolation:</strong> We store tokens and any metadata only in your
-                    browser's extension-specific storage area. This storage is isolated per-extension, meaning no other
-                    website or extension can read it. We do not write this data to any server or share it externally.
-                </li>
-                <li><strong>Token Handling:</strong> OAuth 2.0 tokens (access tokens, refresh tokens) are managed
-                    exclusively by the extension. We never log or transmit tokens outside your local browser.</li>
-                <li><strong>Access Controls:</strong> InboxWhiz only operates under the exact Google scopes you grant
-                    during
-                    OAuth consent. You can revoke our access at any time from your Google Account → Security →
-                    Third-party apps and services.</li>
-                <li><strong>Deletion Upon Uninstall:</strong> When you uninstall or disable the InboxWhiz extension, all
-                    sensitive data (tokens, any cached email-metadata) is automatically purged from your browser. We do
-                    not
-                    attempt to back it up or re-upload it elsewhere.</li>
-                <li><strong>No Human Access:</strong> The extension does not transmit your Gmail data to any human or
-                    support-team inbox. All parsing, filtering, and unsubscribe/delete logic is performed entirely
-                    within
-                    your browser, under your control.</li>
-            </ul>
-
-            <h2>Additional Limits on Use of Your Google Data</h2>
             <p>
-                Notwithstanding any other provision in this Privacy Policy, if you grant InboxWhiz access to your Google
-                data,
-                the use of that data will be subject to the following additional restrictions:
-
-            <ul>
-                <li>InboxWhiz will only use your Gmail data accessed via the Gmail API to read or control Gmail message
-                    metadata, headers, and message content, to enable you to process
-                    (delete/unsubscribe from) emails.</li>
-                <li>InboxWhiz will not use your Gmail data for serving advertisements.</li>
-                <li>InboxWhiz will not allow humans to read your data.</li>
-                <li>Any use or transfer of information received from Google APIs by InboxWhiz will comply with the <a
-                        href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank"
-                        rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use
-                    requirements.</li>
-            </ul>
+                We do <strong>not</strong> use the Gmail API and we do <strong>not</strong> request or store
+                authorization tokens.
             </p>
+
+            <h2>Data Storage</h2>
+            <p>
+                InboxWhiz does not store any email content, credentials, analytics, or personal information on external
+                servers. No data is transmitted off your device. Any temporary state (for UI selections, filters, etc.)
+                is stored only in your browser's local storage.
+            </p>
+
+            <h2>Third-Party Sharing</h2>
+            <p>
+                InboxWhiz does not share, sell, or transfer any data to third parties.
+            </p>
+
+            <h2>Uninstall Behavior</h2>
+            <p>
+                When you remove InboxWhiz from your browser, all locally stored extension data is removed by the browser
+                automatically.
+            </p>
+
             <h2>Policy Changes</h2>
             <p>
                 This Privacy Policy may be updated periodically. Any changes will be posted on this page, so please
@@ -127,7 +87,7 @@
             </p>
             <h2>Contact Us</h2>
             <p>
-                If you have any questions regarding this Privacy Policy, please contact us at inboxwhiz.help@gmail.com.
+                If you have any questions regarding this Privacy Policy, please contact us at inboxwhiz.help@gmail.com
             </p>
         </section>
     </main>
